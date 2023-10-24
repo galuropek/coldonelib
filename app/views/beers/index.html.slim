@@ -1,0 +1,7 @@
+h2= 'Cold One Library'
+
+ul
+  - @beers.each do |beer|
+    li
+      div
+        p= "#{beer.brand.upcase} #{beer.title.split.map { |word| word.capitalize }.join(' ').squish }"

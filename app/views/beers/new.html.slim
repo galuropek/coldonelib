@@ -1,0 +1,11 @@
+= form_with model: @beer, local: true do |f|
+  div class='figure'
+
+  h2= 'Beer Card:'
+  = f.label :title, class: 'form-label'
+  = f.text_field :title, class: 'form-control'
+
+  = f.label :brand, class: 'form-label'
+  = f.text_field :brand, class: 'form-control'
+
+  = f.submit 'Create Beer Card', class: 'btn btn-primary mt-2'
