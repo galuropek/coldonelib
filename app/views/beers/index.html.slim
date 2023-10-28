@@ -1,7 +1,12 @@
+= provide :page_title, 'Library'
+= currently_at 'Library'
+
 h2= 'Cold One Library'
 
-ul
-  - @beers.each do |beer|
-    li
-      div
-        p= "#{beer.brand.upcase} #{beer.title.split.map { |word| word.capitalize }.join(' ').squish }"
+= paginate @beers
+
+.row.row-cols-1.row-cols-md-5.g-4
+  = render @beers
+
+= paginate @beers
+

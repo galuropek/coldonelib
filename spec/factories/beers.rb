@@ -4,5 +4,9 @@ FactoryBot.define do
     brand { "MyString" }
     name { "MyString" }
     description { "MyText" }
+
+    trait :invalid do
+      title { nil }
+    end
   end
 end

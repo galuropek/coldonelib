@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 ruby "3.2.2"
 
+gem 'sassc-rails'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.1"
 
@@ -45,7 +46,8 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 # Custom:
-gem 'slim-rails'
+gem 'slim-rails', '~> 3.1'
+gem 'kaminari', '~> 1.2'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -55,6 +57,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rails-controller-testing'
   gem 'factory_bot_rails'
+  gem 'faker'
 end
 
 group :development do
