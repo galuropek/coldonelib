@@ -1,0 +1,6 @@
+.col style="height: 300px;"
+  .card.h-100
+    .card-body
+      img src="https://i.ibb.co/5Lxxvvs/No-image-found.jpg" class="card-img-top" alt="..."
+      h6 class="card-title"
+        = link_to "#{beer.brand.upcase} #{beer.title}", beer_path(beer), class: 'nav-link'

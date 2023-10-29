@@ -1,0 +1,43 @@
+= provide :page_title, 'Beer card'
+= currently_at 'Beer card'
+
+.row.row-cols-3.mt-5
+  .col-3
+    img src="https://i.ibb.co/5Lxxvvs/No-image-found.jpg"
+  .col-5
+    h2.fw-bold
+      = "#{@beer.brand.upcase} #{@beer.title}"
+    p Rating 7/10
+  .col
+    p #todo - something
+  .col-8.d-flex.justify-content-end
+    = link_to 'Edit', edit_beer_path(@beer), class: 'link-dark me-1'
+    ||
+    = link_to 'Remove', beer_path(@beer), class: 'link-dark mx-1', data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" }
+.row
+  .col-8
+    hr
+
+h5 Recommendations:
+p #todo - fix: get recomendstions by brands or something else
+.row.row-cols-1.row-cols-sm-6.g-4
+  - Beer.limit(3).each do |beer|
+    = render beer
+.row
+  .col-8
+    hr
+
+h5 Features
+p #todo
+.row
+  .col-8
+    hr
+
+h5 Description
+p #todo
+.row
+  .col-8
+    hr
+
+h5 Community reviews
+p #todo

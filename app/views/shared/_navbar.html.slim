@@ -1,0 +1,15 @@
+= provide :navbar do
+  nav class = "navbar navbar-expand-lg bg-body-tertiary"
+    .container-fluid
+      = link_to "Cold One Lib", beers_path, class: "navbar-brand", current_page: current_page
+
+      div class = "collapse navbar-collapse" id = "navbarNav"
+        ul class = "navbar-nav"
+          li class = "nav-item"
+            = nav_tab "Library", beers_path, class: "nav-link active", aria_current: "page", current_page: current_page
+          li class = "nav-item"
+            = nav_tab "Create", new_beer_path, class: "nav-link active", aria_current: "page", current_page: current_page
+          li class = "nav-item"
+            = nav_tab "Features", '#', class: "nav-link active", aria_current: "page", current_page: current_page
+          li class = "nav-item"
+            = nav_tab "Pricing", '#', class: "nav-link active", aria_current: "page", current_page: current_page
